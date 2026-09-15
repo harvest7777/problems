@@ -1,3 +1,4 @@
+# https://open.kattis.com/problems/basketballoneonone
 s = input()
 prev = ""
 points = {"A": 0, "B": 0}
