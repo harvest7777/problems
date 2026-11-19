@@ -1,0 +1,39 @@
+// link:
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t = 1;
+  cin >> t; // delete for single-test problems (CSES, USACO)
+  while (t--) {
+    ll zero;
+    ll one;
+    ll n;
+    cin >> zero;
+    cin >> one;
+    cin >> n;
+    ll rem_zero = one ^ zero;
+    ll rem_one = rem_zero ^ one;
+    ll rem_two = rem_one ^ rem_zero;
+
+    if (n == 0) {
+      cout << zero;
+    } else if (n == 1) {
+      cout << one;
+    } else {
+      if (n % 3 == 0) {
+        cout << rem_zero;
+      } else if (n % 3 == 1) {
+        cout << rem_one;
+      } else {
+        cout << rem_two;
+      }
+    }
+    cout << '\n';
+  }
+  return 0;
+}
